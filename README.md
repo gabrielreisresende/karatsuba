@@ -50,3 +50,45 @@ python main.py
 
 ## Saída da Execução
 ![image](https://github.com/user-attachments/assets/47822143-fff3-405b-ba0b-bc5c448f0992)
+
+
+## Relatório Técnico
+
+### Análise da Complexidade Ciclomática
+A complexidade ciclomática, uma métrica de software que indica a complexidade de um programa, mede diretamente o número de caminhos lineares independentes através do código fonte.
+
+#### Fluxo de Controle da Função karatsuba:
+Nós: Entrada da função, condição de if, chamadas recursivas, cálculos aritméticos, retorno. <br>
+Arestas: Transições entre as condições de if e chamadas recursivas, retorno do resultado.
+
+#### Representação Gráfica do Grafo de Fluxo:
+
+#### Cálculo da Complexidade Ciclomática:
+N (Nós): 5 (Entrada, Condição, Chamadas recursivas, Combinação, Retorno) <br>
+E (Arestas): 6 (Entre entrada e condição, condição para retorno, condição para cálculo, cálculos para chamadas, chamadas para combinação, combinação para retorno)  <br>
+P (Componentes Conexos): 1  <br>
+
+Usando a fórmula  <br>
+M = E−N+2P  <br>
+M = 6−5+2∗1 <br>
+M = 3 <br>
+
+A complexidade ciclomática de 3 indica três caminhos independentes pelo código, refletindo as decisões de if e as chamadas recursivas.
+
+### Análise da Complexidade Assintótica
+A complexidade assintótica é fundamental para entender como o algoritmo escala com a entrada de dados, em termos de tempo (temporal) e espaço (espacial) requerido.
+
+#### Complexidade Temporal:
+
+O algoritmo de Karatsuba reduz a multiplicação de dois números de O(n²) para O(n<sup>1.585</sup>). Isso é possível porque o algoritmo faz três multiplicações de metade do tamanho em cada nível recursivo e uma quantidade linear de outras operações.
+
+#### Complexidade Espacial:
+
+A complexidade espacial é principalmente devido ao espaço de pilha usado pelas chamadas recursivas. Em cada chamada recursiva, os números são divididos em metades, e novos números são criados. Portanto, a complexidade espacial é 
+O(n log n), devido à profundidade da recursão multiplicada pelo espaço usado em cada chamada.
+
+#### Casos de Análise:
+
+- Melhor Caso: Quando os números têm menos de 10 (um dígito), a função retorna imediatamente o produto direto, que é O(1).
+- Caso Médio: Assume divisões e multiplicações com números de vários dígitos, levando a múltiplas chamadas recursivas.
+- Pior Caso: Quando os números são grandes e todos os dígitos são significativos, maximizando o número de chamadas recursivas e operações aritméticas.
