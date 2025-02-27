@@ -27,7 +27,7 @@ python main.py
 - Inicialmente é feita uma verificação para executar o algoritmo somente se os números de entrada tiverem mais de um dígito. Caso ao contrário, é realizada a operação de multiplicação padrão
   para servir de caso base para a recursão, o qual permite terminar a recursão quando os números são suficientemente pequenos: <br>
  ```if x < 10 or y < 10: return x * y```
-- Caso os números sigam o fluxo, será obtido o maior número de dígitos entre so dois números e, após isso, divide esse resultado ao meio;
+- Caso os números sigam o fluxo, será obtido o maior número de dígitos entre so dois números e, após isso, divide esse resultado ao meio: <br>
     ```maxLenght = max(len(str(x)), len(str(y)))``` <br>
     ```half = maxLenght // 2```
 - Depois, é feita a divisão dos dois números a serem multiplicados em duas metades: <br>
@@ -62,18 +62,21 @@ Nós: Entrada da função, condição de if, chamadas recursivas, cálculos arit
 Arestas: Transições entre as condições de if e chamadas recursivas, retorno do resultado.
 
 #### Representação Gráfica do Grafo de Fluxo:
+obs: Vértices de acordo com o número da linha do print do código <br>
+
+![image](https://github.com/user-attachments/assets/bc044d9b-2514-4b7a-82e8-9612c828f9b2)
 
 #### Cálculo da Complexidade Ciclomática:
-N (Nós): 5 (Entrada, Condição, Chamadas recursivas, Combinação, Retorno) <br>
-E (Arestas): 6 (Entre entrada e condição, condição para retorno, condição para cálculo, cálculos para chamadas, chamadas para combinação, combinação para retorno)  <br>
+N (Nós): 12 (Entrada, Condição, Chamadas recursivas, Combinação, Retorno) <br>
+E (Arestas): 12 (Entre entrada e condição, condição para retorno, condição para cálculo, cálculos para chamadas, chamadas para combinação, combinação para retorno)  <br>
 P (Componentes Conexos): 1  <br>
 
 Usando a fórmula  <br>
 M = E−N+2P  <br>
-M = 6−5+2∗1 <br>
-M = 3 <br>
+M = 12−12+2∗1 <br>
+M = 2 <br>
 
-A complexidade ciclomática de 3 indica três caminhos independentes pelo código, refletindo as decisões de if e as chamadas recursivas.
+A complexidade ciclomática de 2 indica dois caminhos independentes pelo código, refletindo as decisões do if que possibita dois fluxos no método.
 
 ### Análise da Complexidade Assintótica
 A complexidade assintótica é fundamental para entender como o algoritmo escala com a entrada de dados, em termos de tempo (temporal) e espaço (espacial) requerido.
