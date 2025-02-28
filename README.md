@@ -63,7 +63,7 @@ Arestas: Transições entre as condições de if e chamadas recursivas, retorno 
 
 #### Representação Gráfica do Grafo de Fluxo:
 
-![image](https://github.com/user-attachments/assets/235e582e-3765-4f83-8c6f-fe9332f814b4)
+![image](https://github.com/user-attachments/assets/e2c02edb-2886-4dba-bbab-40e545a94d01)
 
 #### Cálculo da Complexidade Ciclomática:
 N (Nós): 10 (Entrada, Condição, Chamadas recursivas, Combinação, Retorno) <br>
