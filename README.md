@@ -62,18 +62,17 @@ Nós: Entrada da função, condição de if, chamadas recursivas, cálculos arit
 Arestas: Transições entre as condições de if e chamadas recursivas, retorno do resultado.
 
 #### Representação Gráfica do Grafo de Fluxo:
-obs: Vértices de acordo com o número da linha do print do código <br>
 
-![image](https://github.com/user-attachments/assets/bc044d9b-2514-4b7a-82e8-9612c828f9b2)
+![image](https://github.com/user-attachments/assets/235e582e-3765-4f83-8c6f-fe9332f814b4)
 
 #### Cálculo da Complexidade Ciclomática:
-N (Nós): 12 (Entrada, Condição, Chamadas recursivas, Combinação, Retorno) <br>
-E (Arestas): 12 (Entre entrada e condição, condição para retorno, condição para cálculo, cálculos para chamadas, chamadas para combinação, combinação para retorno)  <br>
+N (Nós): 10 (Entrada, Condição, Chamadas recursivas, Combinação, Retorno) <br>
+E (Arestas): 10 (Entre entrada e condição, condição para retorno, condição para cálculo, cálculos para chamadas, chamadas para combinação, combinação para retorno)  <br>
 P (Componentes Conexos): 1  <br>
 
 Usando a fórmula  <br>
 M = E−N+2P  <br>
-M = 12−12+2∗1 <br>
+M = 10−10+2∗1 <br>
 M = 2 <br>
 
 A complexidade ciclomática de 2 indica dois caminhos independentes pelo código, refletindo as decisões do if que possibita dois fluxos no método.
