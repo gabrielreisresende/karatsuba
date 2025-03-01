@@ -63,19 +63,19 @@ Arestas: Transições entre as condições de if e chamadas recursivas, retorno 
 
 #### Representação Gráfica do Grafo de Fluxo:
 
-![image](https://github.com/user-attachments/assets/e2c02edb-2886-4dba-bbab-40e545a94d01)
+![image](https://github.com/user-attachments/assets/9cd8d49a-01b5-4474-8441-071dee61fa85)
 
 #### Cálculo da Complexidade Ciclomática:
-N (Nós): 10 (Entrada, Condição, Chamadas recursivas, Combinação, Retorno) <br>
-E (Arestas): 10 (Entre entrada e condição, condição para retorno, condição para cálculo, cálculos para chamadas, chamadas para combinação, combinação para retorno)  <br>
+N (Nós): 13 (Entrada, Condição, Chamadas recursivas, Combinação, Retorno) <br>
+E (Arestas): 11 (Entre entrada e condição, condição para retorno, condição para cálculo, cálculos para chamadas, chamadas para combinação, combinação para retorno)  <br>
 P (Componentes Conexos): 1  <br>
 
 Usando a fórmula  <br>
 M = E−N+2P  <br>
-M = 10−10+2∗1 <br>
-M = 2 <br>
+M = 13−11+2∗1 <br>
+M = 4 <br>
 
-A complexidade ciclomática de 2 indica dois caminhos independentes pelo código, refletindo as decisões do if que possibita dois fluxos no método.
+A complexidade ciclomática de 4 indica quatro possíveis caminhos independentes pelo código, refletindo as decisões do if e das chamadas recursivas presentes no método.
 
 ### Análise da Complexidade Assintótica
 A complexidade assintótica é fundamental para entender como o algoritmo escala com a entrada de dados, em termos de tempo (temporal) e espaço (espacial) requerido.
